@@ -1,0 +1,8 @@
+# Footprint mappings (CvPcb hints)
+# Map symbols to footprints when running CvPcb in KiCad
+# U1 -> LQFP48_7x7mm
+# U2 -> TDA7439_SO (per datasheet package)
+# U3 -> SOIC-8_3.9x4.9mm_P1.27mm
+# J_RCA_* -> RCA-FEMALE
+# OLED1 -> HDR-1X4
+# SWD -> JST-2X5
