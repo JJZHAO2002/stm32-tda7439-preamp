@@ -1,0 +1,11 @@
+Ref,Qty,Value/Type,Footprint,Manufacturer,Manufacturer_PN,Distributor_Link,Comment
+U1,1,STM32F103C8T6,LQFP48_7x7mm,ST,STM32F103C8T6,https://www.mouser.com/search/refine?Keyword=STM32F103C8T6,MCU
+U2,1,TDA7439,SSOP-28?,NXP,TDA7439,https://www.nxp.com/products/audio-analog/analog-audio-amplifiers/tda7439-analog-audio-processor:?,Audio preamp IC - check package
+U3,1,MCP6002,SOIC-8,Microchip,MCP6002-I/SN,https://www.digikey.com/en/products/detail/microchip-technology/MCP6002-I-SN/?,Audio buffer op-amp
+OLED1,1,SSD1306 Module,Header-1x4,Generic,SSD1306-128X64,https://www.mouser.com/Search/Refine?Keyword=ssd1306,OLED module
+IR1,1,TSOP4838,TO-92,Vishay,TSOP4838,https://www.mouser.com/ProductDetail/Vishay/TSOP4838,IR receiver
+LDO1,1,LT1763-3.3,SOT-23-5,AnalogDevices,LT1763ES5-3.3,https://www.mouser.com/ProductDetail/Analog-Devices/LT1763ES5-3.3,3.3V low-noise LDO
+LDO2,1,LT1763-5,SOT-23-5,AnalogDevices,LT1763ES5-5.0,https://www.mouser.com/ProductDetail/Analog-Devices/LT1763ES5-5.0,Audio LDO
+J_RCA_IN_PAIR,3,2x RCA Pair,RCA-FEMALE,Generic,RCA-FEMALE,https://www.mouser.com/Search/Refine?Keyword=RCA%20jack,RCA input connectors
+J_RCA_OUT,2,RCA Pair,RCA-FEMALE,Generic,RCA-FEMALE,https://www.mouser.com/Search/Refine?Keyword=RCA%20jack,Output connectors
+C_DEC,10,0.1uF,0805,Generic,0805-C0.1uF,https://www.mouser.com/Search/Refine?Keyword=0805%200.1uF,Decoupling

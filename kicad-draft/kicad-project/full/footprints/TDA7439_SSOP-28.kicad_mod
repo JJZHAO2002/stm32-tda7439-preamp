@@ -1,0 +1,5 @@
+(module TDA7439_SSOP-28 (layer F.Cu)
+  (descr "TDA7439 SSOP-28 footprint placeholder")
+  (tags "TDA7439 SSOP-28")
+  ; NOTE: This is a placeholder. Create real footprint in KiCad Footprint Editor matching datasheet pad count and pad geometry.
+)

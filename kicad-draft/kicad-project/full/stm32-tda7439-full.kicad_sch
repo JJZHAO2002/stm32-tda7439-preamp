@@ -1,0 +1,12 @@
+(kicad_sch (version 20211014) (generator eeschema)
+  (sheet "Top Level")
+  (title_block (title "STM32 + TDA7439 Preamp - Full Schematic") )
+
+  ; This file is a combined top-level schematic placeholder for the full design.
+  ; It references four subsheets (power, audio_frontend, mcu_ui, outputs_connectors).
+  ; The real .kicad_sch pages are included separately in this folder and should be linked in KiCad as hierarchical sheets.
+
+  ; Global nets used:
+  ; VIN_12V, CHASSIS_GND, V_AUDIO, V_3V3, GND_ANALOG, GND_DIGITAL, I2C_SCL, I2C_SDA, TDA_OUT_L, TDA_OUT_R
+
+)

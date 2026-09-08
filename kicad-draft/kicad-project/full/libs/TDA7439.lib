@@ -1,0 +1,30 @@
+# TDA7439 symbol (KiCad library format placeholder)
+# Pins are listed per functional groups; use datasheet to verify pin numbers when creating real symbol.
+# This is a human-readable placeholder to be converted into a real .lib by importing into KiCad symbol editor.
+
+TDA7439
+# Power pins
+VCC : POWER_INPUT
+GND : POWER_INPUT
+
+# Control
+SCL  : SIGNAL
+SDA  : SIGNAL
+MUTE : SIGNAL
+RESET: SIGNAL
+
+# Inputs
+IN1L : SIGNAL
+IN1R : SIGNAL
+IN2L : SIGNAL
+IN2R : SIGNAL
+IN3L : SIGNAL
+IN3R : SIGNAL
+
+# Outputs
+OUTL : SIGNAL
+OUTR : SIGNAL
+
+# Notes:
+# - When creating the symbol in KiCad, set the footprint field to the package used (e.g. SSOP-28 or SO-28 per datasheet)
+# - Add fields: Manufacturer, PartNumber, DatasheetURL

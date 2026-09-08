@@ -1,0 +1,13 @@
+# MCP6002 symbol placeholder
+# Two op-amps in one package. Pins: 1A, 1B, 2A, 2B etc. Map to SOIC-8.
+MCP6002
+VCC : POWER_INPUT
+VSS : POWER_INPUT
+OUT1: SIGNAL
+IN1+: SIGNAL
+IN1-: SIGNAL
+OUT2: SIGNAL
+IN2+: SIGNAL
+IN2-: SIGNAL
+
+# Footprint suggestion: Package_SO:SOIC-8_3.9x4.9mm_P1.27mm

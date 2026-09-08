@@ -1,0 +1,5 @@
+(module MCP6002_SOIC-8 (layer F.Cu)
+  (descr "MCP6002 SOIC-8 footprint placeholder")
+  (tags "MCP6002 SOIC-8")
+  ; Pads 1..8 SMD
+)

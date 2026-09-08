@@ -1,0 +1,13 @@
+EESchema Schematic Symbol Library
+# RCA connector symbol placeholder
+Connector_RCA
+PIN1 : SIGNAL ; center
+SHELL: POWER_INPUT ; shell / chassis
+
+# LDO generic symbol placeholder
+LDO_3V3
+VIN : POWER_INPUT
+VOUT: POWER_OUTPUT
+GND : POWER_INPUT
+
+# Add these symbols to project library in KiCad symbol editor

@@ -2,21 +2,31 @@
   (version 20211014)
   (host pcbnew 6.0)
   (general (thickness 1.6))
-  (setup (layers 4) (board_outline (pts (xy 0 0) (xy 12000000 0) (xy 12000000 8000000) (xy 0 8000000))))
+  (setup (layers 4))
 
-  ; Modules (more detailed placements)
-  (module LQFP48:STM32F103 (layer F.Cu) (at 30 40) (descr "STM32F103C8T6 LQFP48") (tedit 0)
-    (pad 1 smd rect (at -4 4) (size 0.6 0.6))
+  ; Detailed placement and routing notes (initial auto-placement + manual route skeleton)
+
+  ; --- Components ---
+  (module LQFP48:STM32F103 (layer F.Cu) (at 30 40) (descr "STM32F103C8T6 LQFP48")
+    (pad 1 thru_hole)
   )
 
-  (module TDA7439:SO (layer F.Cu) (at 15 40) (descr "TDA7439 package") (tedit 0))
+  (module TDA7439_SSOP-28 (layer F.Cu) (at 15 38) (descr "TDA7439") )
+  (module MCP6002_SOIC-8 (layer F.Cu) (at 25 50) (descr "MCP6002") )
 
-  (module SOIC-8:MCP6002 (layer F.Cu) (at 25 50) (descr "MCP6002 SOIC-8") (tedit 0))
+  ; RCA connectors (edge)
+  (module RCA_IN1 (layer F.Cu) (at 2 60))
+  (module RCA_IN2 (layer F.Cu) (at 2 45))
+  (module RCA_IN3 (layer F.Cu) (at 2 30))
 
-  (module RCA_LEFT (layer F.Cu) (at 2 60) (descr "RCA IN group") (tedit 0))
-  (module RCA_RIGHT (layer F.Cu) (at 110 20) (descr "RCA OUT group") (tedit 0))
+  (module RCA_OUT1 (layer F.Cu) (at 110 20))
 
-  ; Zones and planes placeholders
-  (zone (net GND) (layer GND) (hatch 0) (thermal 1) (pts (xy 0 0) (xy 12000000 0) (xy 12000000 8000000) (xy 0 8000000)))
+  ; --- Example routed nets (skeleton, not full Gerber-ready) ---
+  ; I2C_SCL: STM32 PB6 -> pull-up -> TDA7439 SCL
+  (segment (start 30 40) (end 50 40) (width 0.254) (layer F.Cu) (net I2C_SCL))
+  ; Audio path example: TDA_OUT_L -> coupling cap -> MCP6002 IN
+  (segment (start 15 38) (end 25 48) (width 0.508) (layer F.Cu) (net TDA_OUT_L))
 
+  ; Ground plane placeholder on L2
+  (zone (net 0) (layer GND) (hatch 0) (pts (xy 0 0) (xy 120 0) (xy 120 80) (xy 0 80)))
 )
