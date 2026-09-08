@@ -1,0 +1,14 @@
+# TDA7439 symbol (placeholder)
+# This file is a plain-text placeholder to remind to create a proper symbol
+# in the KiCad symbol library. A correct symbol should match the datasheet
+# pinout and fields.
+
+# Suggested symbol fields:
+# - Reference: U?
+# - Value: TDA7439
+# - Footprint: <manufacturer:package> (select after checking datasheet)
+
+# Suggested pins grouping:
+# - Power: Vcc, GND
+# - Control: SCL, SDA, MUTE, RESET
+# - Analog: IN1L, IN1R, IN2L, IN2R, IN3L, IN3R, OUTL, OUTR

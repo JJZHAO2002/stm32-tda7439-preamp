@@ -1,0 +1,16 @@
+# KiCad project file (placeholder)
+# This .kicad_pro contains minimal metadata for the KiCad project.
+
+[kicad_project]
+version=20211014
+
+generator=KiCad 6.0.0
+
+[general]
+last_trace_editor=pcbnew
+
+[schematics]
+files=STM32_TDA7439.kicad_sch
+
+[board]
+file=stm32-tda7439-preamp.kicad_pcb

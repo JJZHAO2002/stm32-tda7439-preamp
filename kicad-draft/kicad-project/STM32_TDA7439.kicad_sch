@@ -1,0 +1,25 @@
+(kicad_sch
+  (version 20211014)
+  (generator eeschema)
+
+  # This schematic file is a placeholder that contains the textual netlist
+  # and mapping information. Use it as reference to redraw the schematic
+  # in KiCad Eeschema or to convert it into a proper .kicad_sch using
+  # KiCad symbol library parts.
+
+  ; Netlist & Connections (see connections.net for full netlist)
+  ; - MCU U1: STM32F103C8T6 (LQFP48)
+  ;   PB6 = I2C_SCL, PB7 = I2C_SDA, PA0 = IR_IN, PA9/PA10 = USART
+  ; - TDA7439 U2: I2C controlled audio preamp; inputs IN1L/R..IN3L/R; outputs OUTL/OUTR
+  ; - MCP6002 U3: output buffers for left/right
+  ; - SSD1306: I2C OLED on I2C_SCL/I2C_SDA
+  ; - TSOP4838: IR receiver on PA0
+
+  ; Instructions:
+  ; 1) In KiCad, create a new project, add 4 schematic sheets: power.sch,
+  ;    audio_frontend.sch, mcu_ui.sch, outputs_connectors.sch.
+  ; 2) Place symbols as specified in sheets.md and wire nets according to connections.net.
+  ; 3) Annotate, assign footprints (LQFP48 for STM32, SOIC-8 for MCP6002, RCA footprints for connectors),
+  ;    then run CvPcb to map symbols to footprints, and generate netlist for PCBNew.
+
+)

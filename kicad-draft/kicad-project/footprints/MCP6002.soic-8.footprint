@@ -1,0 +1,3 @@
+# MCP6002 footprint placeholder
+# Use KiCad library: Package_SO:SOIC-8_3.9x4.9mm_P1.27mm
+# Provided here as instruction; real footprint should be selected via CvPcb
