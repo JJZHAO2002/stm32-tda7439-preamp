@@ -1,0 +1,18 @@
+Ref,Qty,Value/Type,Footprint,Manufacturer,Manufacturer_PN,Comment
+U1,1,STM32F103C8T6,LQFP48,ST,STM32F103C8T6,MCU
+U2,1,TDA7439,SO-?,Philips/NXP,TDA7439,Audio preamp IC (check package)
+U3,1,MCP6002,SOIC-8,Microchip,MCP6002-I/SN,Audio buffer (single-supply)
+OLED1,1,SSD1306 I2C Module,Module,Generic,SSD1306-128X64,OLED module 4-pin
+IR1,1,TSOP4838,TO-92,Vishay,TSOP4838,IR receiver
+LDO1,1,LT1763-3.3,SOT-23-5,LinearTech,LT1763ES5-3.3,3.3V low-noise LDO (or MIC5205)
+LDO2,1,LT1763-5,SOT-23-5,LinearTech,LT1763ES5-5.0,Audio LDO (suggest low-noise)
+J_PWR,1,DC Barrel 2.1mm,TH,Generic,DC-2.1MM,Power jack
+J_RCA_IN1,2,RCA Female,TH,Generic,RCA-FEMALE,Audio IN pair
+J_RCA_OUT,2,RCA Female,TH,Generic,RCA-FEMALE,Audio OUT pair
+C0,5,0.1uF,0805,Generic,0805-C0.1uF,Decoupling
+C1,5,10uF,0805,Generic,0805-C10uF,Bulk decoupling
+R_SER1,6,100,0805,Generic,0805-100R,Input series resistors
+R_PULL1,6,10k,0805,Generic,0805-10K,Input pull-downs
+R_I2C_PU,2,4.7k,0805,Generic,0805-4K7,I2C pull-ups
+TP1,8,Testpoint,TP,Keystone,5000,Testpoints
+SWD_HEADER,1,2x5 SWD Header,TH,Generic,2x5,SWD programming header

@@ -1,0 +1,73 @@
+# Netlist / Connection spec (草稿)
+
+# Netlist / Connection spec (草稿) - 便于在 KiCad 中建图
+# Format: Module | Reference | Pin/Signal | NetName | Notes
+
+Power:
+- POWER | J1_PWR | VIN+ | VIN_12V | 外接 12V 输入
+- POWER | J1_PWR | GND  | GND_IN  | 外部地/机箱地可单独 CHASSIS_GND
+- PWR   | LDO_AUD | IN   | VIN_12V | LDO_AUDIO 输入
+- PWR   | LDO_AUD | OUT  | V_AUDIO | 模拟电源，用于 TDA7439
+- PWR   | LDO_3V3| IN   | VIN_12V | LDO_3V3 输入
+- PWR   | LDO_3V3| OUT  | V_3V3   | MCU 与逻辑
+
+MCU (STM32F103C8T6, LQFP48) (symbol: U1)
+- U1 | PA9  | USART1_TX | TXD |
+- U1 | PA10 | USART1_RX | RXD |
+- U1 | PB6  | I2C1_SCL   | I2C_SCL |
+- U1 | PB7  | I2C1_SDA   | I2C_SDA |
+- U1 | PA0  | EXTI0/IR   | IR_IN |
+- U1 | PA8  | ENC_A      | ENC_A |
+- U1 | PA9  | ENC_B      | ENC_B (注意：如果 PA9 已用 TXD，可改用 TIM2/EXTI pin)
+- U1 | PC13 | BTN_PUSH   | BTN1 |
+- U1 | PA13 | SWDIO      | SWDIO |
+- U1 | PA14 | SWCLK      | SWCLK |
+- U1 | VDD  | 3.3V       | V_3V3 |
+- U1 | VSS  | GND        | GND_DIGITAL
+
+Audio IC (TDA7439) (symbol: U2)
+- U2 | SCL  | SCL        | I2C_SCL | Pullups 4.7k to V_3V3
+- U2 | SDA  | SDA        | I2C_SDA |
+- U2 | MUTE | MUTE_CTRL  | MUTE_CTRL | MCU PC0 控制 (active 根据 datasheet)
+- U2 | RESET| RESET_CTRL | RESET_CTRL | MCU PC1 (或 tie-up)
+- U2 | IN1L | IN1L       | RCA_IN_1_L_NODE |
+- U2 | IN1R | IN1R       | RCA_IN_1_R_NODE |
+- U2 | IN2L | IN2L       | RCA_IN_2_L_NODE |
+- U2 | IN2R | IN2R       | RCA_IN_2_R_NODE |
+- U2 | IN3L | IN3L       | RCA_IN_3_L_NODE |
+- U2 | IN3R | IN3R       | RCA_IN_3_R_NODE |
+- U2 | OUTL | OUTL       | TDA_OUT_L |
+- U2 | OUTR | OUTR       | TDA_OUT_R |
+- U2 | VCC  | V_AUDIO    | V_AUDIO |
+- U2 | GND  | GND_ANALOG | GND_ANALOG
+
+Audio inputs (per RCA)
+- J_RCA_IN1 | L | CENTER -> FB -> R100 -> C2.2uF -> RCA_IN_1_L_NODE -> Rpull 10k -> GND_ANALOG
+- J_RCA_IN1 | R | CENTER -> ... -> RCA_IN_1_R_NODE
+(similar for IN2/IN3)
+
+Audio outputs
+- TDA_OUT_L -> C_out 4.7uF -> BUF_IN_L (MCP6002 IN+)
+- TDA_OUT_R -> C_out 4.7uF -> BUF_IN_R
+- BUF_OUT_L -> RCA_OUT_L
+- BUF_OUT_R -> RCA_OUT_R
+
+I2C peripherals
+- I2C_SCL/I2C_SDA -> SSD1306 SCL/SDA (I2C address 0x3C typical)
+- I2C pullups: R_PU1 4.7k (to V_3V3), R_PU2 4.7k
+
+IR Receiver
+- J_IR | VCC -> V_3V3
+- J_IR | GND -> GND_DIGITAL
+- J_IR | OUT -> IR_IN (PA0) with 10k pull-up to V_3V3
+
+Op-amp (MCP6002) U3
+- U3 | V+ -> V_3V3 (if single 3.3V op amp used) OR V_AUDIO if op amp needs different rail
+- U3 | V- -> GND
+- U3 | IN+ -> TDA_OUT_x (via coupling cap)
+- U3 | IN- -> feedback network (e.g., 10k/10k -> unity gain or slight gain)
+- U3 | OUT -> RCA_OUT_x
+
+Connectors & Test
+- J_SWD: SWDIO (PA13), SWCLK (PA14), GND, VCC (3.3V)
+- TP: Testpoints for V_3V3, V_AUDIO, I2C_SCL, I2C_SDA, TDA_OUT_L, TDA_OUT_R, GND

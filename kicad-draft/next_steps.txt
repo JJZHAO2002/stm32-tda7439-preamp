@@ -1,0 +1,11 @@
+我可以继续为你做（请选择一项或多项）：
+1) 生成完整 KiCad 项目文件并打包为 ZIP（包含 4 页原理图、PCB 草图、基本 footprints 与 BOM）。  -> 我将把 .sch 和 .kicad_pcb 文件生成并提供下载链接或上传到 GitHub（需授权）。
+2) 把 KiCad 工程直接上传到你指定的 GitHub 仓库（请提供 owner/repo 或允许我创建）。 -> 我会创建分支并 push 初始草稿。
+3) 为某些器件（如 TDA7439）制作精确 symbol 与 footprint（如果 KiCad 官方库没有）并附 datasheet pinmap。
+4) 生成详细的 BOM 带 Mouser/DigiKey 链接并估算成本。
+
+请在下面四项中告知我你的偏好（直接回复数字组合即可）：
+A) 生成并提供 KiCad ZIP （本地下载）
+B) 上传到 GitHub (提供 owner/repo 或允许我创建)
+C) 先生成精确 symbol/footprint (TDA7439)
+D) 生成带供应商链接的完整 BOM
