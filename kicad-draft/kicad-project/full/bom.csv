@@ -1,0 +1,12 @@
+# BOM with footprints
+Ref,Qty,Value/Type,Footprint,Manufacturer,Manufacturer_PN,Comment
+U1,1,STM32F103C8T6,LQFP48_7x7mm,ST,STM32F103C8T6,MCU
+U2,1,TDA7439,SSOP-28?,NXP,TDA7439,Audio preamp IC
+U3,1,MCP6002,SOIC-8_3.9x4.9mm,Microchip,MCP6002-I/SN,Audio buffer
+OLED1,1,SSD1306 Module,Header-1x4,Generic,SSD1306-128X64,OLED
+IR1,1,TSOP4838,TO-92,Vishay,TSOP4838,IR receiver
+LDO1,1,LT1763-3.3,SOT-23-5,LinearTech,LT1763ES5-3.3,3.3V LDO
+LDO2,1,LT1763-5,SOT-23-5,LinearTech,LT1763ES5-5.0,Audio LDO
+J_RCA_IN1,3,2x RCA Pair,RCA-FEMALE,Generic,RCA-FEMALE,Input connectors
+J_RCA_OUT,2,RCA Pair,RCA-FEMALE,Generic,RCA-FEMALE,Output connectors
+C_DEC,10,0.1uF,0805,Generic,0805-C0.1uF,Decoupling

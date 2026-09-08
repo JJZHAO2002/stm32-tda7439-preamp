@@ -1,0 +1,21 @@
+(kicad_sch (version 20211014) (generator eeschema)
+  (sheet "power")
+  (title_block (title "Power") )
+
+  (symbol (lib_id "Power:DC_JACK")
+    (at 10 15)
+    (property "Reference" "J1" (id 1))
+    (property "Value" "DC_JACK" (id 2))
+  )
+
+  (symbol (lib_id "Regulators:LT1763")
+    (at 60 40)
+    (property "Reference" "U_LDO1" (id 1))
+    (property "Value" "LT1763-3.3" (id 2))
+  )
+
+  (wire (pts (xy 10 10) (xy 60 10)))
+
+  ; Nets used: VIN_12V, GND_IN, V_AUDIO, V_3V3
+  ; Place decoupling caps and testpoints per placement_and_pcb_rules.md
+)

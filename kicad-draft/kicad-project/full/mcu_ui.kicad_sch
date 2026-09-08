@@ -1,0 +1,20 @@
+(kicad_sch (version 20211014) (generator eeschema)
+  (sheet "mcu_ui")
+  (title_block (title "MCU & UI") )
+
+  (symbol (lib_id "MCU:STM32F103C8")
+    (at 60 50)
+    (property "Reference" "U1" (id 1))
+    (property "Value" "STM32F103C8T6" (id 2))
+    (property "Footprint" "Package:LQFP-48_7x7mm" (id 3))
+  )
+
+  (symbol (lib_id "Display:SSD1306") (at 110 20) (property "Reference" "OLED1" (id 1)) (property "Value" "SSD1306" (id 2)))
+  (symbol (lib_id "Sensor:TSOP4838") (at 110 50) (property "Reference" "IR1" (id 1)) (property "Value" "TSOP4838" (id 2)))
+
+  ; I2C pull-ups
+  (symbol (lib_id "Device:R") (at 75 35) (property "Reference" "R_PU_SCL" (id 1)) (property "Value" "4.7k" (id 2)))
+  (symbol (lib_id "Device:R") (at 75 45) (property "Reference" "R_PU_SDA" (id 1)) (property "Value" "4.7k" (id 2)))
+
+  ; Nets: I2C_SCL (PB6), I2C_SDA (PB7), IR_IN (PA0), ENC_A/B
+)

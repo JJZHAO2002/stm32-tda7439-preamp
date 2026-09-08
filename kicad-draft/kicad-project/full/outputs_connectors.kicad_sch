@@ -1,0 +1,10 @@
+(kicad_sch (version 20211014) (generator eeschema)
+  (sheet "outputs_connectors")
+  (title_block (title "Outputs & Connectors") )
+
+  (symbol (lib_id "OpAmps:MCP6002") (at 40 40) (property "Reference" "U3" (id 1)) (property "Value" "MCP6002" (id 2)) (property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" (id 3)))
+
+  (symbol (lib_id "Connector:RCA") (at 10 40) (property "Reference" "J_RCA_OUT1" (id 1)) (property "Value" "RCA" (id 2)))
+
+  ; Connections: TDA_OUT_L -> Cout -> U3 IN+; U3 OUT -> RCA_OUT
+)

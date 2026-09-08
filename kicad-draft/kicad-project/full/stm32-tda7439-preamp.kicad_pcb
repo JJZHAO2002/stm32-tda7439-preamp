@@ -1,0 +1,22 @@
+(kicad_pcb
+  (version 20211014)
+  (host pcbnew 6.0)
+  (general (thickness 1.6))
+  (setup (layers 4) (board_outline (pts (xy 0 0) (xy 12000000 0) (xy 12000000 8000000) (xy 0 8000000))))
+
+  ; Modules (more detailed placements)
+  (module LQFP48:STM32F103 (layer F.Cu) (at 30 40) (descr "STM32F103C8T6 LQFP48") (tedit 0)
+    (pad 1 smd rect (at -4 4) (size 0.6 0.6))
+  )
+
+  (module TDA7439:SO (layer F.Cu) (at 15 40) (descr "TDA7439 package") (tedit 0))
+
+  (module SOIC-8:MCP6002 (layer F.Cu) (at 25 50) (descr "MCP6002 SOIC-8") (tedit 0))
+
+  (module RCA_LEFT (layer F.Cu) (at 2 60) (descr "RCA IN group") (tedit 0))
+  (module RCA_RIGHT (layer F.Cu) (at 110 20) (descr "RCA OUT group") (tedit 0))
+
+  ; Zones and planes placeholders
+  (zone (net GND) (layer GND) (hatch 0) (thermal 1) (pts (xy 0 0) (xy 12000000 0) (xy 12000000 8000000) (xy 0 8000000)))
+
+)

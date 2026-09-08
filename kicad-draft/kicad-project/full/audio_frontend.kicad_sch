@@ -1,0 +1,24 @@
+(kicad_sch (version 20211014) (generator eeschema)
+  (sheet "audio_frontend")
+  (title_block (title "Audio Frontend") )
+
+  ; RCA input connectors
+  (symbol (lib_id "Connector:RCA")
+    (at 10 10) (property "Reference" "J_RCA_IN1" (id 1)) (property "Value" "RCA" (id 2))
+  )
+
+  ; Input passive network
+  (symbol (lib_id "Device:R") (at 25 10) (property "Reference" "R_SER1" (id 1)) (property "Value" "100" (id 2)))
+  (symbol (lib_id "Device:C") (at 35 10) (property "Reference" "C_IN1" (id 1)) (property "Value" "2.2uF" (id 2)))
+
+  ; TDA7439 (generic symbol)
+  (symbol (lib_id "User:TDA7439")
+    (at 80 40)
+    (property "Reference" "U2" (id 1))
+    (property "Value" "TDA7439" (id 2))
+    (property "Footprint" "TDA7439:PACKAGE" (id 3))
+  )
+
+  ; Connect input nets to U2 inputs
+  ; Nets: RCA_IN_1_L_NODE, RCA_IN_1_R_NODE, IN2, IN3
+)

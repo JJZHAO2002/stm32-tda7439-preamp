@@ -1,0 +1,7 @@
+(kicad_sch (version 20211014) (generator eeschema)
+  (sheet "top_level")
+  (title_block (title "Top Level") )
+
+  ; Hierarchical sheet connectors linking power, audio, mcu_ui, outputs
+  ; Global labels: VIN_12V, V_AUDIO, V_3V3, GND_ANALOG, GND_DIGITAL, I2C_SCL, I2C_SDA
+)
